@@ -1,17 +1,24 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ItemListContainer from "./components/ItemListContainer";
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import ItemDetailContainer from './components/item_detail';
 
-import './App.css'
-import Header from './components/Header'
-import ItemListContainer from './components/ItemListContainer'
+
 
 function App() {
 
   return (
-    <div>
-      <Header/>
-      <ItemListContainer greeting="¡Bienvenido a mi tienda!" title="Ofertas Especiales" description="Descubre nuestras increíbles ofertas para productos sostenibles." />
-
-    </div>
-  )
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:id" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

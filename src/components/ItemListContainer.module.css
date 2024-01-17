@@ -1,93 +1,46 @@
+/* ItemListContainer.module.css */
+.itemListCont {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+
+    justify-content: center;
+}
+
 .container {
-    display: grid;
-    /* background-color: aqua; */
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 150px;
-    
-    
-}
-
-.fondo {
-    /* background-color: rgb(230, 19, 19); */
-    grid-column: 1;
-    grid-row: 1;
-    
-}
-.fondo2 {
-    /* background-color: rgb(19, 230, 230); */
-    grid-column: 2;
-    grid-row: 1;
-}
-.fondo3 {
-    /* background-color: rgb(230, 19, 19); */
-    grid-column: 3;
-    grid-row: 1;
-    
-}
-.imagen {
-    width: 300px;
-    
-}
-.lakers {
-    height: 300px;
-    width: 300px;
-}
-.detalle {
-    background-color: rgb(0, 0, 0);
-    color: rgb(245, 245, 245);
-}
-.precio {
-    position: relative;
-    top: -5px;
-    right: 50px;
-    color: rgb(255, 255, 255);
-    
-}
-
-
-.carrito {
-    height: 60px;
-    position: relative;
-    left: 70px;
-    width: 60px;
-    bottom: 70px;
-    border-radius: 50px;
-    cursor: pointer;
-  
-}
-
-.boton {
-    width: 60px;
-    height: 60px;
-    position: relative;
-    bottom: 100px;
-    left: 130px;
-    border-radius: 50px;
-    cursor: pointer;
-    
-}
-
-.title {
-    color: black;
-  
-    
-}
-
-.content {
-    color: black;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-  
- 
+    justify-content: center;
+    align-items: center;
 }
 
-.subtitle{
-    box-shadow: -1px -4px 20px 20px rgba(0, 45, 247, 0.781);
-    background-color: black;
-    color: rgb(17, 0, 255);
+/* ItemListContainer.module.css */
+.productImage {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor padre */
+    max-width: 500px; /* Limita el ancho máximo de la imagen a 300px */
+    height: 500px; /* Mantiene la relación de aspecto de la imagen */
 }
 
-.description{
+.title{
     font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+    top: -20px;
+
+}
+
+/* ItemListContainer.module.css */
+.detailButton {
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.detailButton:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
 }
