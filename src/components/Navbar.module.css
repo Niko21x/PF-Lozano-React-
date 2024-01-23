@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 900px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    top: 25px;
+}
+
+.navbar a:hover {
+    color: #da1111;
+}
+
+.nav {
+    font-size: 20px;
+}
+header {
+    background-color: #111010;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: -1px -4px 20px 20px rgb(255, 60, 0);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .carritobtn {
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: #797e8a;
+    color: rgb(243, 242, 242);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  .carritobtn:hover,
+  .carritobtn:active {
+  background-color: #7c1212;
+}
+
+.imgcompras{
+    width: 4.35rem;
+    height: 4.35rem;
+    margin-right: 0.5rem;
+}
+  .cantidadcarrito {
+    position: relative;
+    right: 10px;
+    top: 25px;
+    background-color: #070be7;
+    padding: 0.25rem 1rem;
+    border-radius: 25px;
+  }
+  

@@ -1,0 +1,73 @@
+.itemList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 100px;
+    padding: 20px;
+    margin-top: 5px;
+    text-align: center;
+  
+   
+}
+.container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+
+}
+.card1 {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+.dcard {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 800px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el grid en dos columnas de igual tamaño */
+    justify-items: center; /* Centra los elementos en cada celda del grid */
+    gap: 10px; /* Añade un espacio de 20px entre las celdas del grid */
+}
+.detailButton {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.detailButton:hover {
+    background-color: #ddd;
+}
+
+.itemListContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
