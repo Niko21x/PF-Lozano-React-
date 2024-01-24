@@ -10,8 +10,11 @@ function Navbar() {
             <h1>Tienda de Guitarras Eléctricas</h1>
             <div className={classes.navbar}>
                     <Link className={classes.nav} to="/">Home</Link>
-                    <Link className={classes.nav} to="/category/1">Stratocaster</Link>
-                    <Link className={classes.nav} to="/category/2">Telecaster</Link>
+                    <Link className={classes.nav} to="/category/fender">Fender</Link>
+                    <Link className={classes.nav} to="/category/gibson">Gibson</Link>
+                    <Link className={classes.nav} to="/category/ibanez">Ibanez</Link>
+                    <Link className={classes.nav} to="/category/ESP">ESP</Link>
+
                     <Cart />
 
             </div>

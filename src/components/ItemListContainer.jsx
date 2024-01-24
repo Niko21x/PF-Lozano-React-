@@ -1,34 +1,27 @@
 // ItemListContainer.jsx
+
 import  { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import products from './Products.json';
-import classes from './Item.module.css';
+import { getProducts, getProductsByCategory } from './asyncMock';
+import ItemList from './ItemList';
 
 function ItemListContainer() {
     const [items, setItems] = useState([]);
-    const { id } = useParams();
+    const { id: category } = useParams();
 
     useEffect(() => {
-        if (id) {
-            const filteredProducts = products.filter(product => product.id === Number(id));
-            setItems(filteredProducts);
+        if (category) {
+            getProductsByCategory(category).then(filteredProducts => {
+                setItems(filteredProducts);
+            });
         } else {
-            setItems(products);
+            getProducts().then(products => {
+                setItems(products);
+            });
         }
-    }, [id]);
+    }, [category]);
 
-    return (
-        <div className={classes.itemList}>
-            {items.map(item => (
-                <div key={item.id} className={classes.card1}>
-                    <h2>{item.marca} {item.modelo}</h2>
-                    <img src={item.imagen} alt={item.modelo} />
-                    <p>${item.precio}</p>
-                    <a href={`/item/${item.id}`} className={classes.detailButton}>Ver detalles</a>
-                </div>
-            ))}
-        </div>
-    );
+    return <ItemList items={items} />;
 }
 
 export default ItemListContainer;
