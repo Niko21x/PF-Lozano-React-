@@ -1,24 +1,32 @@
+// ItemList.jsx
 
 import PropTypes from 'prop-types';
-import classes from './Item.module.css';
+import { Link } from 'react-router-dom';
+import Item from './Item'; // Asegúrate de que la ruta sea correcta
+import classes from './Item.module.css'; // Asegúrate de que la ruta sea correcta
 
 function ItemList({ items }) {
     return (
         <div className={classes.itemList}>
             {items.map(item => (
-                <div key={item.id} className={classes.card1}>
-                    <h2>{item.marca} {item.modelo}</h2>
-                    <img src={item.imagen} alt={item.modelo} />
-                    <p>${item.precio}</p>
-                    <a href={`/item/${item.id}`} className={classes.detailButton}>Ver detalles</a>
-                </div>
+                <Link key={item.id} to={`/item/${item.id}`}>
+                    <Item item={item} />
+                </Link>
             ))}
         </div>
     );
 }
 
 ItemList.propTypes = {
-    items: PropTypes.array.isRequired,
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number,
+            marca: PropTypes.string,
+            modelo: PropTypes.string,
+            imagen: PropTypes.string,
+            precio: PropTypes.number,
+        })
+    ).isRequired,
 };
 
 export default ItemList;
