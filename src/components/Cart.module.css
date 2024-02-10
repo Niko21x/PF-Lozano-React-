@@ -1,0 +1,33 @@
+.cartContainer {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.itemTitle {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.itemPrice {
+    color: #888;
+    font-size: 16px;
+}

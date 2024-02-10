@@ -1,9 +1,11 @@
 // ItemDetail.jsx
-
+import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import classes from './Item.module.css';
+import { CartContext } from './CartContext';
 
 function ItemDetail({ item }) {
+    const { addToCart } = useContext(CartContext);
     return (
         <div className={classes.container}>
             <div className={classes.dcard}>
@@ -12,6 +14,7 @@ function ItemDetail({ item }) {
                     <h2>{item.marca} {item.modelo}</h2>
                     <p>{item.descripcion}</p>
                     <p>Price  ${item.precio}USD</p>
+                     <button className={classes.addcart} onClick={() => addToCart(item)}>Agregar al carrito</button>
                 </div>
             </div>
         </div>

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.ReactModal__Content {
+   position: absolute !important; 
+   top: 50% !important;
+  left: 50% !important;
+   transform: translate(-50%, -50%) !important; 
+  border: none !important; 
+  background-color: transparent !important;
+   /* overflow: visible !important;  */
+  border-radius: 500 !important;
+  /* display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  text-align: center !important; */
+  /* max-height: 100vh !important; */
+  width: auto;
+  height: 500px;
+
+}

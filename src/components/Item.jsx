@@ -6,12 +6,12 @@ import classes from './Item.module.css';
 
 function Item({ item }) {
     return (
-        <div className={classes.card1}>
+        <Link to={`/item/${item.id}`} className={classes.card1}>
             <h3>{item.name}</h3>
             <img src={item.imagen} alt={item.name} />
             <p>{item.description}</p>
-            <Link className={classes.detailButton} to={`/item/${item.id}`}>Ver más detalle</Link>
-        </div>
+            <div className={classes.detailButton}>Ver más detalle</div>
+        </Link>
     );
 }
 
