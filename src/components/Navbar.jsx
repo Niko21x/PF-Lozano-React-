@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import classes from './Navbar.module.css';
 import Cart from './Cart';
@@ -14,6 +14,13 @@ function Navbar() {
     const handleCartClick = () => {
         setIsCartOpen(!isCartOpen);
     };
+    const navigate = useNavigate();
+
+    const handleCheckout = () => {
+        navigate('/checkout'); // Navega al formulario de checkout
+        handleCartClick(); // Cierra el modal
+    };
+
 
     return (
         <div>
@@ -23,7 +30,7 @@ function Navbar() {
                     <Link className={classes.nav} to="/">Home</Link>
                     <Link className={classes.nav} to="/category/fender">Fender</Link>
                     <Link className={classes.nav} to="/category/gibson">Gibson</Link>
-                    <Link className={classes.nav} to="/category/ibanez">Ibanez</Link>
+                    <Link className={classes.nav} to="/category/Ibanez">Ibanez</Link>
                     <Link className={classes.nav} to="/category/ESP">ESP</Link>
                 </div>
                 <button className={classes.carritobtn} onClick={handleCartClick}> 
@@ -40,7 +47,8 @@ function Navbar() {
             >
                 <div className={classes.modalContent}>
                     <Cart />
-                    <button onClick={handleCartClick}>Cerrar carrito</button>
+                    <button className={classes.closecart} onClick={handleCartClick}>Cerrar carrito</button>
+                    <button className={classes.finishbuy}onClick={handleCheckout}>Finalizar compra</button>
                 </div>
             </Modal>
         </div>

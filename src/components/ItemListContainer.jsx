@@ -2,7 +2,7 @@
 
 import  { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProducts, getProductsByCategory } from './asyncMock';
+import { getProducts,  getProductsByCategory } from '../services/Firestore';
 import ItemList from './ItemList';
 
 function ItemListContainer() {

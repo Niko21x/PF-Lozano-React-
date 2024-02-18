@@ -3,7 +3,7 @@
 import  { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import { getProducts } from './asyncMock'; 
+import { getProducts } from '../services/Firestore';
 
 function ItemDetailContainer() {
     const [item, setItem] = useState(null);
