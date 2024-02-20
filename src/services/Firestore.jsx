@@ -1,5 +1,5 @@
 // firestore.js
-import { collection, addDoc, getDocs, query, where, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, getDocs, query, where, serverTimestamp,updateDoc } from "firebase/firestore";
 import db from './Firebase'; 
 import { products } from '../data/Products'; 
 
@@ -15,14 +15,21 @@ const addProductsToFirestore = async () => {
 
 addProductsToFirestore();
 
-const createOrder = async (items) => {
+const createOrder = async (items, contactData) => {
     const ordersCol = collection(db, 'orders');
     const newOrder = {
         items,
+        contactData,
         fecha: serverTimestamp(),
         estado: 'generada'
     };
-    await addDoc(ordersCol, newOrder);
+    const docRef = await addDoc(ordersCol, newOrder);
+    const orderId = docRef.id; // Este es el ID del documento que Firebase generó automáticamente
+
+    
+    await updateDoc(docRef, { orderId: orderId });
+
+    return orderId; // Devuelve el orderId 
 };
 
 export default createOrder;

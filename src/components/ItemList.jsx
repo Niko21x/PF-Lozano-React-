@@ -2,8 +2,8 @@
 
 import PropTypes from 'prop-types';
 
-import Item from './Item'; // Asegúrate de que la ruta sea correcta
-import classes from './Item.module.css'; // Asegúrate de que la ruta sea correcta
+import Item from './Item'; 
+import classes from './Item.module.css'; 
 
 function ItemList({ items }) {
     return (

@@ -88,6 +88,8 @@ header {
     max-height: 80vh; 
     overflow-y: auto;
     text-align: center;
+    position: relative;
+    top: -200px;
   }
 
   @keyframes fadeIn {
@@ -134,4 +136,10 @@ header {
 
   .finishbuy:hover {
     background-color: #d61b1b;
+  }
+
+  .modal1{
+    background-color: transparent;
+    height: 20%;
+    margin-bottom: 250px;
   }

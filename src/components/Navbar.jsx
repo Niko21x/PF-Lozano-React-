@@ -44,6 +44,7 @@ function Navbar() {
                 onRequestClose={handleCartClick}
                 contentLabel="Carrito"
                 overlayClassName={classes.modalOverlay}
+                className={classes.modal1}
             >
                 <div className={classes.modalContent}>
                     <Cart />

@@ -17,7 +17,7 @@ code {
   left: 50% !important;
    transform: translate(-50%, -50%) !important; 
   border: none !important; 
-  background-color: transparent !important;
+  background-color: transparent; 
    /* overflow: visible !important;  */
   border-radius: 500 !important;
   /* display: flex !important;
@@ -29,3 +29,4 @@ code {
   height: 500px;
 
 }
+
